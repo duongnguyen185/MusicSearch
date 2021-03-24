@@ -1,0 +1,404 @@
+.z-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(42, 43, 63, 0.7);
+}
+
+.z-modal .z-modal-inner {
+  position: relative;
+  margin: 15% auto;
+  min-width: 330px;
+  background-color: #fcfcfc;
+  padding: 15px;
+}
+
+.z-modal .z-modal-inner.z-no-pad {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0;
+}
+
+.z-modal.--z--center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.z-modal.--z--center .z-modal-inner {
+  margin: 0;
+}
+
+.z-modal .z-modal-content {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.z-modal .z-modal-close {
+  display: inline-block;
+  float: right;
+}
+
+.z-modal .z-modal-close .icon {
+  font-size: 14px;
+  color: #a0a0a0;
+}
+
+.z-modal .z-circle-close-btn {
+  position: absolute;
+  z-index: 1;
+  right: -14px;
+  top: -14px;
+}
+
+.z-modal .z-buy-download-zone {
+  background-color: #fcfcfc;
+  padding: 10px;
+  text-align: center;
+}
+
+.z-modal .z-buy-download-zone .--z--zingmp3-logo {
+  display: inline-block;
+  background-image: url("http://static-zmp3.zadn.vn/skins/zmp3-v5.1/vip/images/rule-zingmp3.svg");
+  width: 119px;
+  height: 30px;
+  background-size: contain;
+}
+
+.z-modal .z-buy-download-zone .z-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fcfcfc;
+}
+
+.z-modal .z-buy-download-zone .z-copyright-content {
+  line-height: 1.8;
+  font-size: 14px;
+  color: #fcfcfc;
+  margin-top: 5px;
+}
+
+.z-modal .z-buy-download-zone .z-copyright-content .z-bold {
+  font-weight: 500;
+}
+
+.z-modal .z-buy-download-zone .z-login-btn,
+.z-modal .z-buy-download-zone .z-cancel-btn,
+.z-modal .z-buy-download-zone .z-create-new-event,
+.z-modal .z-buy-download-zone .z-edit-feed-btn {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #65509e;
+  padding: 10px 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 20px 0 10px;
+}
+
+.z-modal .z-buy-download-zone .z-login-btn.z-yellow-btn,
+.z-modal .z-buy-download-zone .z-cancel-btn.z-yellow-btn,
+.z-modal .z-buy-download-zone .z-create-new-event.z-yellow-btn,
+.z-modal .z-buy-download-zone .z-edit-feed-btn.z-yellow-btn {
+  background-color: #f0c000;
+  color: #8947ad;
+}
+
+.z-modal .z-buy-download-zone .z-login-btn.z-zalo-login-btn,
+.z-modal .z-buy-download-zone .z-cancel-btn.z-zalo-login-btn,
+.z-modal .z-buy-download-zone .z-create-new-event.z-zalo-login-btn,
+.z-modal .z-buy-download-zone .z-edit-feed-btn.z-zalo-login-btn {
+  background-color: #fcfcfc;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.z-modal .z-buy-download-zone .z-cancel-btn,
+.z-modal .z-buy-download-zone .z-create-new-event,
+.z-modal .z-buy-download-zone .z-edit-feed-btn {
+  margin-top: 15px;
+}
+
+.z-modal .z-buy-download-zone .z-cancel-btn.z-cancel-upload-btn,
+.z-modal .z-buy-download-zone .z-create-new-event.z-cancel-upload-btn,
+.z-modal .z-buy-download-zone .z-edit-feed-btn.z-cancel-upload-btn {
+  background-color: #fff;
+  color: #3fae29;
+  border: solid 1px #3fae29;
+  padding: 9px 11px;
+  margin-left: 6px;
+}
+
+.z-modal .z-buy-download-zone .z-create-new-event,
+.z-modal .z-buy-download-zone .z-edit-feed-btn {
+  padding: 10px 42px;
+  margin-top: 0;
+}
+
+.z-modal .z-buy-download-zone .z-create-new-event.z-cancel-upload-btn,
+.z-modal .z-buy-download-zone .z-edit-feed-btn.z-cancel-upload-btn {
+  padding: 9px 42px;
+}
+
+.z-modal .z-buy-download-zone .z-edit-feed-btn {
+  padding: 10px 19px;
+  margin-top: 15px;
+}
+
+.z-modal .z-buy-download-zone .z-list-upload .list-song li {
+  padding: 5px;
+}
+
+.z-modal .z-buy-download-zone .z-list-upload .list-song li .z-card.--z--disabled .card-info .title,
+.z-modal .z-buy-download-zone .z-list-upload .list-song li .z-card.--z--disabled .card-info .artist {
+  pointer-events: none;
+}
+
+.z-modal .z-buy-download-zone .z-list-upload .list-song li .z-card .card-info {
+  width: 100%;
+  text-align: left;
+}
+
+.z-modal .z-buy-download-zone .z-list-upload .list-song li .z-card .card-info .title a {
+  font-weight: 500;
+}
+
+.z-modal .z-buy-download-zone .z-header-title {
+  margin-bottom: 7px;
+  text-align: left;
+}
+
+.z-modal .z-buy-download-zone .z-header-title .z-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fcfcfc;
+  text-align: left;
+  display: inline-block;
+}
+
+.z-modal .z-buy-download-zone .z-header-title .z-see-detail {
+  text-decoration: underline;
+  color: #3fae29;
+  font-weight: 500;
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.z-modal .z-buy-download-zone .z-header-title .z-choose-song-number {
+  color: #fcfcfc;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper,
+.z-modal .z-buy-download-zone .z-search-song-wrapper {
+  text-align: left;
+  padding: 0 5px;
+  margin: 25px 0;
+  width: 100%;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-box-menu,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-box-menu {
+  background-color: #f7f7f7;
+  border: solid 1px #ebebeb;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  width: 100px;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-box-menu .z-item-selected,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-box-menu .z-item-selected {
+  min-width: 100%;
+  color: #fcfcfc;
+  font-size: 12px;
+  padding: 10px 14px;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-box-menu .z-item-selected .icon,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-box-menu .z-item-selected .icon {
+  font-size: inherit;
+  color: inherit;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-box-menu .z-item-selected.active,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-box-menu .z-item-selected.active {
+  color: #fff;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-box-menu .dropdown-menu-list,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-box-menu .dropdown-menu-list {
+  top: 103%;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper input::placeholder,
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper input::-webkit-input-placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper input::placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper input::-webkit-input-placeholder {
+  font-size: 12px;
+  text-align: left;
+  color: #a0a0a0 !important;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper input:-ms-input-placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper input:-ms-input-placeholder {
+  font-size: 12px;
+  text-align: left;
+  color: #a0a0a0 !important;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper input:-moz-input-placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper input:-moz-input-placeholder {
+  font-size: 12px;
+  text-align: left;
+  color: #a0a0a0 !important;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper textarea::placeholder,
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper textarea::-webkit-input-placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper textarea::placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper textarea::-webkit-input-placeholder {
+  font-size: 12px;
+  text-align: left;
+  color: #a0a0a0 !important;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper textarea:-ms-input-placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper textarea:-ms-input-placeholder {
+  font-size: 12px;
+  text-align: left;
+  color: #a0a0a0 !important;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper textarea:-moz-input-placeholder,
+.z-modal .z-buy-download-zone .z-search-song-wrapper textarea:-moz-input-placeholder {
+  font-size: 12px;
+  text-align: left;
+  color: #a0a0a0 !important;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-input-container,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-input-container {
+  float: right;
+  width: calc(100% - 100px);
+  position: relative;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-input-container input,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-input-container input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  font-size: 12px;
+  color: #fcfcfc;
+  border: solid 1px #ebebeb;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+
+.z-modal .z-buy-download-zone .z-search-hot-song-wrapper .z-input-container .icon,
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-input-container .icon {
+  margin-top: -9px;
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+}
+
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-input-container {
+  float: initial;
+  width: 100%;
+}
+
+.z-modal .z-buy-download-zone .z-search-song-wrapper .z-input-container input {
+  border: solid 1px #ebebeb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.z-modal .z-download-pkg-btn {
+  display: inline-block;
+  background-color: #65509e;
+  width: 130px;
+  height: 40px;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  line-height: normal;
+  padding-top: 3px;
+}
+
+.z-modal .z-download-pkg-btn .z-type {
+  font-size: 10px;
+  color: #fff;
+}
+
+.z-modal .z-download-pkg-btn .z-bold {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.z-modal .z-download-pkg-btn .z-label {
+  position: absolute;
+  right: -15px;
+  top: -8px;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 1px 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.z-modal .z-download-pkg-btn .z-free-label {
+  background-color: #00bc38;
+  color: #fff;
+}
+
+.z-modal .z-packages {
+  padding: 0;
+  margin: 15px 0 10px;
+}
+
+.z-modal .z-packages .z-download-pkg-btn {
+  margin-right: 25px;
+}
+
+.--z--rule-modal .z-modal-inner {
+  width: 327px;
+}
+
+.--z--rule-modal .z-buy-download-zone {
+  padding: 30px 50px;
+}
+
+.--z--rule-modal .z-buy-download-zone .z-copyright-content {
+  font-size: 12px;
+  color: #888;
+}
+
+.--z--rule-modal .z-buy-download-zone .z-login-btn {
+  margin: 10px 0 0 0;
+}

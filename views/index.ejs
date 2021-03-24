@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <head>
+        <title>Zing MP3 VIP - Trải nghiệm không gian âm nhạc đẳng cấp của Zing Mp3</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="format-detection" content="telephone=no">
+        <meta property="og:site_name" content="Mp3 Vip" />
+        <meta property="og:image" content="../assets/images/vip_cover_20180920.jpg" />
+
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+
+        <link href="../assets/css/layout.1.6.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/modal.copyright.css" rel="stylesheet" type="text/css">
+        <style>
+            .payment-container .payment-type--zalopay .has-2button .w-btn .btn {
+                display: block;
+                width: 100%;
+            }
+
+            .payment-container .list-type--bank li a span.more {
+                font-size: 12px;
+            }
+
+            .payment-container .list-type--bank li a:hover {
+                border: 1px solid #800080;
+                box-shadow: none;
+            }
+
+            .button-login-zalo {
+                background: #1caae5;
+                border-color: #1caae5;
+                box-shadow: inset 0 0 0 1px #1caae5;
+                color: #fff;
+            }
+
+            .body .module-faqs .inside ul.dlist li {
+                font-weight: normal;
+            }
+
+            .body .module-faqs .inside .slstitle {
+                color: #333;
+            }
+
+            .payment-container .item-p {
+                width: 50%;
+            }
+
+            @media only screen and (max-width: 768px) {
+                .payment-container .item-p {
+                    width: 100%;
+                }
+            }
+            .none {
+                display: none !important;
+            }
+
+            @media only screen and (max-width: 768px) {
+                .payment-container .payment-type--zalopay li a {
+                    height: 75px;
+                    padding: 12px;
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+
+                .payment-container .list-type--bank li a span.more,
+                .payment-container .list-type--bank li img {
+                    width: 140px;
+                    height: 50px;
+                    line-height: 50px;
+                    margin: 0 auto;
+                }
+            }
+
+
+            .videoyouto {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100000;
+                display: none;
+            }
+        </style>
+        <script src="../stc-sp.zadn.vn/session-sdk/session-sdk.min.js"></script>
+        <script>
+            ZaloLoginWidget.init({
+                sessionName: 'zmp3_sid'
+            });
+        </script>
+        <script type="text/javascript">
+            if (location.host.indexOf('mp3.zing.vn') > -1) {
+                var newdomain = location.href.replace('mp3.zing.vn', 'zingmp3.vn')
+                location.href = newdomain;
+            }
+
+
+            var MP3 = {
+                VIP: "",
+                VIP_EXPIRE: "",
+                ZALO_ID: "",
+                ACCOUNT_ID: "0",
+                ACCOUNT_NAME: "",
+                DISPLAY_NAME: "",
+                GENRE_ID: 0,
+                BANNER_OFF: 0,
+                MP3_URL: "https://zingmp3.vn",
+                MP3_VIP_URL: "https://zingmp3.vn/vip",
+                XHR_URL: "//zingmp3.vn/xhr", IMG_URL: "//photo-zmp3-td.zadn.vn", STATIC_URL: "//static-zmp3.zadn.vn", SKIN_URL: "//static-zmp3.zadn.vn/skins/zmp3-v5.1", INTER_URL: "", LOG_URL: "", LOG_INFO: "", IEVERSION: 9, AD_OVA: "", MOD: 0, API_VIP_URL: "https://vip.api.zingmp3.vn", API_COMMENT_URL: "", DATE: "", IP: "", IS_PC: 1, OVA_DISABLE: 0, MEDIAID: "", ZLIKE_KEY: "", ZLIKE_TOKEN: "", ITEM_NEXT_URL: '', ITEM_NEXT_TITLE: '', SUGGEST: []
+            };
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.async = 1;
+                js.defer = 1;
+                js.src = "../apis.google.com/js/platform.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'gplatform'));
+
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', '../www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-1571128-44', 'auto');
+            ga('send', 'pageview');
+            ga('create', 'UA-1571128-44', 'auto', { 'name': 'mp3' });
+        </script>
+        <!-- Include Plugin-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+</head>
+
+<body>
+    <style>
+        .zaloplus {
+            position: relative;
+            margin-bottom: 30px;
+            color: #24272b;
+            font-weight: 500;
+        }
+
+        #footer.bg-footer {
+            background-color: #f3f3f3 !important;
+            text-align: center;
+            padding-top: 50px;
+            margin: auto;
+            color: #888 !important;
+            font-size: 12px;
+        }
+
+        .bg-footer .z-license-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-footer .z-logo {
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url(../static-zmp3.zadn.vn/skins/zmp3-v5.2/images/logo-mp-3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .require-login-zalo {
+            margin-top: 10px;
+        }
+    </style>
+    <!-- <div class="background"></div> -->
+    <div canvas="container">
+        <div id="wrapper">
+            <div class="wrapper-page">
+                <div class="zimgmp3Vip-layout">
+                    <section class="header">
+                        <div class="header-container">
+                            <div class="js-toggle-left-slidebar js-menu-mobile">
+                                <div class="trigger-menu"><span class="three-bars-icon"></span></div>
+                            </div>
+                            <div class="logo-container">
+                                <a href="index.html" title="Zing Mp3">Zing Mp3 - VIP</a>
+                            </div>
+                            <div class="menu-user">
+                                <ul>
+
+                                    <li class="li_login"><a class="fn-login" title="Đăng Nhập" href="#"
+                                            onclick="openlogin();">Đăng
+                                            Nhập</a></li>                           
+                                    <li class="li_logout" style="display: flex;"><a id="nameuser"></a>
+                                        <a class="fn-login" title="Đăng Nhập" href="#" onclick="logout();">Đăng
+                                            Xuất</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    <section class="body">
+                        <div class="body-container">
+                            <div class="cover-container cover-home" >
+                            
+                                <div class="inside"><span class="logo-mp3"></span>
+                                    <h2>MUSIC</h2>                              
+                                    <div class="form-group form-inline">
+                                        <form>
+                                            <div>
+                                                <input type="text" name="kw" id="kwtimkiem" class="form-control"
+                                                    style="width: 90%" placeholder="Tìm kiếm">
+                                            </div>
+                                            <div>
+                                                <input type="submit" class="form-control fas fa-search"
+                                                    onclick="return false;" id="btnsearch" value="Tìm Kiếm"
+                                                    style="width: 25%; margin-top: 5px;">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div>
+                                        <h3 class="conver-content" id="ketquatim"></h3>
+                                    </div>
+
+                                </div>
+                                <div id="div_loadmusic" class="package"
+                                    style="position: relative;top: 20px;padding-bottom: 50px;">
+                        
+
+                                </div>
+                                <div class="hidden" id="div_load" style="display: none;">
+                                    <h4 style="color: white;">Bạn vui lòng chờ trong giây lát</h4>
+                                    <p class="textAlign-center"><img src="../assets/images/loading.gif"
+                                            alt=""></p>
+                                    <p class="textAlign-center"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                </div>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="gototop" style="position: fixed; bottom: 100px; right: 15px; z-index: 10000; opacity: 0.6;display: none;">
+        <input type="button" value="Top" style="padding: 15px 5px;  color: gray;" id="btn_gotop">
+    </div>
+
+    <div class="videoyouto">
+        <div style="background-color: black;">
+            <button class="form-control" style="padding: 5px;" id="quaylai">Quay Lại</button>
+            <div class="logo-container" style="left: 50%; top: 0;">
+                <a href="index.html" title="Zing Mp3">Zing Mp3 - VIP</a>
+            </div>
+        </div>
+        <iframe id="jframyouto" width="100%" height="96%" src="" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <div class="dashboard">
+        <!-- Header -->
+        <div class="w-5">
+            <!-- CD -->
+            <div class="cd">
+                <div class="cd-thumb"
+                    style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+                </div>
+            </div>
+        </div>
+        <div class="w-30">
+            <header id="songisplaying">
+                <h4>Now playing:</h4>
+                <h2 id="namesong">String 57th & 9th</h2>
+                <h3 id="tencasi"></h3>
+            </header>
+        </div>
+
+        <!-- Control -->
+        <div class="w-60">
+            <input id="progress" class="progress" type="range" value="0" step="0.0001" min="0" max="100">
+            <div class="control">
+                <button class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="btn btn-prev" onclick="priMusic()">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="btn btn-toggle-play">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                </button>
+                <button class="btn btn-next" onclick="nextMusic();">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                </button>
+            </div>
+
+
+
+            <audio id="audio" src=""></audio>
+        </div>
+    </div>
+    <div class="modal fade in" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true" style="display: none;z-index: 15;">
+        <div class="modal-dialog modal--m" style="margin-top: 10%;">
+            <div class="modal-container">
+                <div class="title-modal"><span>Đăng Nhập</span></div><a class="func-close" title="Đóng lại"
+                    data-dismiss="modal" aria-label="Close" onclick="closelogin();"><i class="ic ic-close"></i></a>
+                <div class="content">
+                    <form>
+                        <div>
+                            <input type="text" name="kw" id="txtusername" class="form-control" style="width: 100%"
+                                placeholder="Tên đăng nhập" required>
+                        </div>
+                        <div>
+                            <input type="password" name="kw" id="txtpsw" class="form-control" style="width: 100%"
+                                placeholder="Tên đăng nhập" required>
+                        </div>
+                        <div style="color: red;" id="divstatusdn">
+
+                        </div>
+                        <div style="text-align: center;">
+                            <input type="submit" class="form-control fas fa-search" onclick="return false;"
+                                id="btnlogin" value="Đăng Nhập"
+                                style="width: 35%; margin-top: 5px; text-align: center;">
+                        </div>
+                        <div style="text-align: center;margin-top: 5px;">
+                            <fb:login-button scope="public_profile,email" data-button-type="continue_with"
+                                onlogin="checkLoginState();" data-size="large"></fb:login-button>
+                        </div>
+                    </form>
+                </div>
+            </div><a class="func-close-mobile" title="Đóng lại" data-dismiss="modal" aria-label="Close">Đóng</a>
+        </div>
+    </div>
+    <iframe id="my_iframedownload" style="display:none;"></iframe>
+
+    <!-- <div class="hoamai">
+        <img src="../assets/images/hoamai.png" alt="">
+    </div> -->
+
+    <script>
+        $(document).ready(function () {
+            $('.z-copyright-intro').click(function () {
+                $('.--z--rule-modal').show();
+            })
+            $('.close-modal').click(function () {
+                $('.--z--rule-modal').hide();
+            })
+        });
+    </script>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script type="text/javascript"></script>
+
+
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+<!-- Mirrored from zingmp3.vn/vip by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Mar 2021 04:22:31 GMT -->
+
+</html>
